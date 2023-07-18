@@ -2,8 +2,8 @@
 
 
 
-import com.example.specialejsp.Joueur;
-import com.example.specialejsp.JoueurDAO;
+import com.example.specialejsp.model.Joueur;
+import com.example.specialejsp.dao.JoueurDAO;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

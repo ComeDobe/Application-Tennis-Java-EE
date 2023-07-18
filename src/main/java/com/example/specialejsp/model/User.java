@@ -1,55 +1,7 @@
-//package com.example.specialejsp;
-//
-//public class User {
-//    private int id;
-//    private String login;
-//    private String password;
-//    private int profil;
-//
-//    public User(int id, String login, String password, int profil) {
-//        this.id = id;
-//        this.login = login;
-//        this.password = password;
-//        this.profil = profil;
-//    }
-//
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public void setId(int id) {
-//        this.id = id;
-//    }
-//
-//    public String getLogin() {
-//        return login;
-//    }
-//
-//    public void setLogin(String login) {
-//        this.login = login;
-//    }
-//
-//    public String getPassword() {
-//        return password;
-//    }
-//
-//    public void setPassword(String password) {
-//        this.password = password;
-//    }
-//
-//    public int getProfil() {
-//        return profil;
-//    }
-//
-//    public void setProfil(int profil) {
-//        this.profil = profil;
-//    }
-//}
 
 
 
-
-package com.example.specialejsp;
+package com.example.specialejsp.model;
 
 import java.sql.*;
 
@@ -63,7 +15,7 @@ public class User {
     private static final String jdbcUsername = "root";
     private static final String jdbcPassword = "";
 
-    public User(int id, String login, String password, int profil) {
+    public User(String login, String password, int profil) {
         this.id = id;
         this.login = login;
         this.password = password;
@@ -118,7 +70,7 @@ public class User {
             rs = ps.executeQuery();
 
             if (rs.next()) {
-                user = new User(rs.getInt("id"), rs.getString("login"), rs.getString("password"), rs.getInt("profil"));
+                user = new User(rs.getString("login"), rs.getString("password"), rs.getInt("profil"));
             }
         } catch (SQLException e) {
             e.printStackTrace();

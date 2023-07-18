@@ -1,7 +1,12 @@
 
 
 
-package com.example.specialejsp;
+package com.example.specialejsp.controller;
+
+import com.example.specialejsp.dao.JoueurDAO;
+import com.example.specialejsp.dao.MatchDao;
+import com.example.specialejsp.model.Joueur;
+import com.example.specialejsp.model.Match;
 
 import java.io.IOException;
 import java.util.HashMap;

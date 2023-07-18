@@ -1,6 +1,8 @@
 
 
-package com.example.specialejsp;
+package com.example.specialejsp.dao;
+import com.example.specialejsp.model.Match;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

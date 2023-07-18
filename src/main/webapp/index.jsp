@@ -9,6 +9,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Liste des joueurs</title>
+
   <!-- Ajout de Bootstrap CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
         rel="stylesheet">
@@ -25,8 +26,8 @@
     h1 {
       text-align: center;
       font-weight: bold;
-    }
 
+    }
     .search-form {
       display: flex;
       justify-content: center;
@@ -56,22 +57,6 @@
 <body>
 <div class="container">
   <h1 class="my-3">Liste des joueurs</h1>
-
-<%--  <!-- Ajout du lien vers les page  -->--%>
-<%--  <a href="Tournois.jsp">Tournois</a>--%>
-<%--  <a href="Matchs.jsp">Matchs</a>--%>
-<%--  <a href="Epreuves.jsp">Epreuves</a>--%>
-
-
-  <!-- Liens vers les autres pages -->
-  <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
-
-    <a href="Tournois.jsp" style="margin-left: 10px; color: #007bff; text-decoration: none; font-weight: bold;">Tournois</a>
-    <a href="Matchs.jsp" style="margin-left: 10px; color: #007bff; text-decoration: none; font-weight: bold;">Matchs</a>
-    <a href="Epreuves.jsp" style="margin-left: 10px; color: #007bff; text-decoration: none; font-weight: bold;">Epreuves</a>
-
-  </div>
-
 
   <form action="JoueurServlet" method="get" class="search-form">
     <input type="hidden" name="action" value="rechercher">
@@ -144,6 +129,33 @@
 <!-- Ajout de jQuery et de Bootstrap JavaScript -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <%--        <a class="navbar-brand" href="#">Mon entreprise</a>--%>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="Tournois.jsp">Tournois</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Matchs.jsp">Matchs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Epreuves.jsp">Epreuves</a>
+        </li><br><br><br><br><br><br>
+        <li>   <a href="LogoutServlet" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 </body>
 </html>
 
@@ -160,6 +172,7 @@
     });
   });
 </script>
+
 
 
 

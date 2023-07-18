@@ -12,9 +12,6 @@ public class Tournoi {
         this.code = code;
 
     }
-//
-//    public Tournoi(String id, String nom, String code) {
-//    }
 
     public int getId() {
         return id;

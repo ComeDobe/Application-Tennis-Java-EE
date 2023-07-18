@@ -110,7 +110,9 @@
 
 
 
-package com.example.specialejsp;
+package com.example.specialejsp.dao;
+
+import com.example.specialejsp.model.Joueur;
 
 import java.sql.*;
 import java.util.ArrayList;

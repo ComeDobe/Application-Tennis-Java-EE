@@ -1,4 +1,4 @@
-package com.example.specialejsp;
+package com.example.specialejsp.model;
 
 public class Joueur {
     private int id;
